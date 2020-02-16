@@ -56,7 +56,7 @@ export default {
   methods: {
     async save() {
       //    let res;
-      if (this.id) {
+      if (this.id) {        
         await this.$http.put(`rest/ads/${this.id}`, this.model);
       } else {
         await this.$http.post("rest/ads", this.model);
