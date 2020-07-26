@@ -1,88 +1,109 @@
-//resert
+//reset
 * {
-    box-sizing: border-box;
-    outline: none;
+  box-sizing: border-box;
+  outline: none;
 }
 
 html {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.2em;
-    background: #f1f1f1;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2em;
+  background: #f1f1f1;
 }
 
 a {
-    color: #999;
-    text-decoration: none;
+  color: #999;
+  text-decoration: none;
 }
 
 //colors
-$colors:("primary":#db9e34, "white":#fff, "light":#f9f9f9, "gery":#999, "dark":#222, "dark-1":#333, "blcak":#000, );
-@each $colorKey,
-$color in $colors {
-    .text-#{$colorKey} {
-        color: $color;
-    }
-    .bg-#{$colorKey} {
-        background-color: $color;
-    }
+$colors: (
+  "primary": #db9e34,
+  "white": #fff,
+  "light": #f9f9f9,
+  "gery": #999,
+  "dark": #222,
+  "dark-1": #333,
+  "blcak": #000,
+);
+@each $colorKey, $color in $colors {
+  .text-#{$colorKey} {
+    color: $color;
+  }
+  .bg-#{$colorKey} {
+    background-color: $color;
+  }
 }
 
 //text-align 对齐方式
 @each $var in (left, right, center) {
-    .text-#{$var} {
-        text-align: $var;
-    }
+  .text-#{$var} {
+    text-align: $var;
+  }
 }
 
 //font-size
-$base-font-size:1rem;
-$font-sizes:(xs:0.7692, //10px
-sm:0.9231, //12px
-md:1, //13px
-lg:1.0769, //14px
-xl:1.2308, //16px
+$base-font-size: 1rem;
+$font-sizes: (
+  xs: 0.7692,
+  //10px
+    sm: 0.9231,
+  //12px
+    md: 1,
+  //13px
+    lg: 1.0769,
+  //14px
+    xl: 1.2308,
+  //16px
 );
-@each $sizeKey,
-$size in $font-sizes {
-    .ft-#{$sizeKey} {
-        font-size: $size*$base-font-size;
-    }
+@each $sizeKey, $size in $font-sizes {
+  .ft-#{$sizeKey} {
+    font-size: $size * $base-font-size;
+  }
 }
 
 //flex
-.d-felx {
-    display: flex;
+.d-flex {
+  display: flex;
 }
 
 .flex-column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
-$felx-jc:(start:flex-start, end:flex-end, center:flex-center, between:space-between, around:space-around, );
-@each $key,
-$value in $flex-jc {
-    .jc-#{$key} {
-        justify-content: $value;
-    }
+$flex-jc: (
+  start: flex-start,
+  end: flex-end,
+  center: flex-center,
+  between: space-between,
+  around: space-around,
+);
+@each $key, $value in $flex-jc {
+  .jc-#{$key} {
+    justify-content: $value;
+  }
 }
 
-$felx-ai:(start:flex-start, end:flex-end, center:flex-center, stretch:stretch, );
-@each $key,
-$value in $flex-ai {
-    .ai-#{$key} {
-        justify-content: $value;
-    }
+$flex-ai: (
+  start: flex-start,
+  end: flex-end,
+  center: flex-center,
+  stretch: stretch,
+);
+@each $key, $value in $flex-ai {
+  .ai-#{$key} {
+    justify-content: $value;
+  }
 }
 
 .flex-1 {
-    flex: 1;
+  flex: 1;
 }
 
 .flex-grow-1 {
-    flex-grow: 1;
+  flex-grow: 1;
 }
